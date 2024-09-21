@@ -1,0 +1,133 @@
+/* Dark theme styling with AAA contrast */
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #121212; /* Dark background */
+    color: #f4f4f4; /* Light text for high contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f4f4f4; /* High contrast */
+    font-weight: 700;
+}
+
+.container {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.date-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 3em;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+    padding: 0 20px;
+}
+
+.arrow:hover {
+    color: #ff5656; /* Accessible red hover */
+}
+
+.date-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 12em; /* Huge day number */
+    color: #ff5656; /* High contrast red */
+    margin: 0;
+    line-height: 1;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em; /* Really small weekday */
+    color: #e0e0e0;
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 4em; /* Month name twice the size of weekday */
+    color: #f4f4f4;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Red day name styling */
+.red-day-name {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.red-day-name p {
+    font-size: 1.5em;
+    color: #f4f4f4;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Calendar year styling */
+#calendar-year {
+    font-size: 1.2em;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+/* Calendar styling */
+.calendar-container {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent; /* No background box */
+    width: 80%; /* Reduced size */
+    max-width: 400px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #f4f4f4;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.red-day {
+    background-color: #ff5656;
+    color: #fff;
+    font-weight: bold;
+}
+
+.empty {
+    visibility: hidden;
+}
+
+.current-day {
+    border: 2px solid #ff5656;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norwegian Red Days</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>When is the next red day?</h2>
+        <div class="date-navigation">
+            <div class="arrow left" onclick="showPreviousRedDay()">&#9664;</div>
+            <div class="date-display">
+                <h1 id="day-number">25</h1>
+                <p id="weekday">Wednesday</p>
+                <h2 id="month">December</h2>
+            </div>
+            <div class="arrow right" onclick="showNextRedDay()">&#9654;</div>
+        </div>
+    </div>
+
+    <!-- Red day name above the calendar -->
+    <div class="red-day-name">
+        <p id="red-day-name">Independence of Norway</p>
+    </div>
+
+    <!-- Calendar below the red day display with year above it -->
+    <div class="calendar-container">
+        <p id="calendar-year">2024</p> <!-- Current year -->
+        <div id="calendar" class="calendar"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
