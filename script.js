@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     const redDays = [
         { date: '2024-01-01', name: 'New Year\'s Day' },
+        { date: '2024-03-28', name: 'Maundy Thursday' },
+        { date: '2024-03-29', name: 'Good Friday' },
+        { date: '2024-03-31', name: 'Easter Sunday' },
         { date: '2024-04-01', name: 'Easter Monday' },
         { date: '2024-05-01', name: 'Labour Day' },
+        { date: '2024-05-09', name: 'Ascension Day' },
         { date: '2024-05-17', name: 'Constitution Day' },
+        { date: '2024-05-19', name: 'Pentecost Sunday' },
+        { date: '2024-05-20', name: 'Pentecost Monday' },
         { date: '2024-12-25', name: 'Christmas Day' },
-        { date: '2025-01-01', name: 'New Year\'s Day' }, // Added red days for next year
-        { date: '2025-04-01', name: 'Easter Monday' },
-        { date: '2025-05-01', name: 'Labour Day' },
-        { date: '2025-05-17', name: 'Constitution Day' },
-        { date: '2025-12-25', name: 'Christmas Day' },
+        { date: '2024-12-26', name: 'Boxing Day' },
     ];
 
     let currentRedDayIndex = 0;
@@ -91,5 +93,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     findNextRedDay();
 });
-
 
