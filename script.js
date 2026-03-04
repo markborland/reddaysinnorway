@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         locale = nextLocale;
         appTitleElement.textContent = labels[locale].title;
         document.documentElement.lang = locale === 'nb-NO' ? 'nb' : 'en';
+        document.querySelector('.container h2').textContent = labels[locale].title;
 
         flagButtons.forEach((button) => {
             const isActive = button.dataset.locale === locale;

@@ -159,6 +159,9 @@ p {
     background-color: transparent;
     width: min(92vw, 420px);
     border-radius: 0;
+    background-color: #2c2c2c;
+    width: min(92vw, 420px);
+    border-radius: 10px;
     margin-top: 20px;
 }
 
@@ -216,6 +219,13 @@ p {
 
     p {
         font-size: 0.95em;
+    }
+
+    .language-flags {
+        top: 10px;
+        right: 10px;
+    }
+
     }
 
     .language-flags {
