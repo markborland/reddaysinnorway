@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentRedDayIndex = 0;
     let locale = 'en-NO';
 
+    const appTitleElement = document.getElementById('app-title');
     const dayNumberElement = document.getElementById('day-number');
     const weekdayElement = document.getElementById('weekday');
     const monthElement = document.getElementById('month');
@@ -204,6 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setLocale(nextLocale) {
         locale = nextLocale;
+        appTitleElement.textContent = labels[locale].title;
+        document.documentElement.lang = locale === 'nb-NO' ? 'nb' : 'en';
         document.querySelector('.container h2').textContent = labels[locale].title;
 
         flagButtons.forEach((button) => {
