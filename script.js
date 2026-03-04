@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const redDayNameElement = document.getElementById('red-day-name');
     const calendarYearElement = document.getElementById('calendar-year');
     const daysUntilElement = document.getElementById('days-until');
-    const localeSelect = document.getElementById('locale-select');
+    const flagButtons = document.querySelectorAll('.flag-button');
     const calendarWeekdaysElement = document.getElementById('calendar-weekdays');
 
     const labels = {
@@ -205,13 +205,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLocale(nextLocale) {
         locale = nextLocale;
         document.querySelector('.container h2').textContent = labels[locale].title;
+
+        flagButtons.forEach((button) => {
+            const isActive = button.dataset.locale === locale;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+
         displayRedDay();
     }
 
     document.querySelector('.left').addEventListener('click', showPreviousRedDay);
     document.querySelector('.right').addEventListener('click', showNextRedDay);
-    localeSelect.addEventListener('change', (event) => setLocale(event.target.value));
+    flagButtons.forEach((button) => {
+        button.addEventListener('click', () => setLocale(button.dataset.locale));
+    });
 
     currentRedDayIndex = findNextRedDayIndex();
-    displayRedDay();
+    setLocale(locale);
 });

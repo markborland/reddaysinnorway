@@ -26,20 +26,37 @@ body {
     max-width: 700px;
 }
 
-.controls {
+.language-flags {
+    position: fixed;
+    top: 16px;
+    right: 16px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
+    z-index: 10;
 }
 
-.controls select {
-    background: #1f1f1f;
+.flag-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
     border: 1px solid #3a3a3a;
-    color: #f4f4f4;
-    border-radius: 6px;
-    padding: 4px 8px;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flag-button:hover,
+.flag-button:focus-visible {
+    transform: translateY(-1px);
+    border-color: #ff5656;
+    box-shadow: 0 0 0 2px rgba(255, 86, 86, 0.25);
+}
+
+.flag-button.active {
+    border-color: #ff5656;
+    box-shadow: 0 0 0 2px rgba(255, 86, 86, 0.4);
 }
 
 .date-navigation {
@@ -192,6 +209,17 @@ p {
 
     p {
         font-size: 0.95em;
+    }
+
+    .language-flags {
+        top: 10px;
+        right: 10px;
+    }
+
+    .flag-button {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 
     .arrow {
